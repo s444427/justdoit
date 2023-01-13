@@ -4,7 +4,9 @@ import logo from "../../assets/logo.svg"
 import {Button} from "react-bootstrap";
 import "./YachtListCard.css"
 
+
 export function YachtListCard (props) {
+
     return (
         <>
             <div className = "card" style={{padding: "10px", margin: "10px", borderRadius: "25px"}} onClick={() => {
@@ -33,9 +35,6 @@ export function YachtListCard (props) {
                         </div>
                     </div>
                     <div>
-                        <div>
-                            Cena: 1000 zł
-                        </div>
                         <Button variant="success" style={{marginTop: "20px"}}>
                             Rezerwuj
                         </Button>

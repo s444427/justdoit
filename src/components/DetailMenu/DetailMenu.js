@@ -1,30 +1,28 @@
 import logo from "../../assets/logo.svg"
+import {Button, ButtonGroup} from "react-bootstrap";
+import {useState} from "react";
+import YachtInfo from "./YachtInfo/YachtInfo";
 
 export function DetailMenu (props) {
+
+    const [chosen_tab, set_chosen_tab] = useState(() => {
+        return "INFO";
+    });
+
     return (
         <>
-            <h5 style={{textAlign: "center"}}>
-                Antila 27
-            </h5>
-            <div style={{display: "flex", textAlign:"center"}}>
-                <div>
-                    <img src={logo} style={{width: "400px", background: "pink"}}/>
-                </div>
-                <div>
-                    <img src={logo} style={{width: "200px", background: "pink"}}/>
-                    <img src={logo} style={{width: "200px", background: "pink"}}/>
-                    <img src={logo} style={{width: "200px", background: "pink"}}/>
-                    <img src={logo} style={{width: "200px", background: "pink"}}/>
-                </div>
+            <div >
+                <ButtonGroup style={{ width: "100%"}}>
+                    <Button variant={"light"} onClick={() => set_chosen_tab("INFO")}>Informacje o Jachcie</Button>
+                    <Button variant={"light"} onClick={() => set_chosen_tab("CALENDAR")}>Kalendarz dostępności</Button>
+                    <Button variant={"light"} onClick={() => set_chosen_tab("OTHER")}>Button 3</Button>
+                </ButtonGroup>
             </div>
-            <div>
-                <h5 style={{textAlign: "center", margin: "10px"}}>
-                    Tytuł podrozdziału
-                </h5>
-                <div>
-                    hello
-                </div>
-            </div>
+            {chosen_tab === "INFO"?
+                <YachtInfo/>:
+                chosen_tab === "CALENDAR"?
+                    <div>Bonjour</div>:<div>Nie można wyświetlić informacji</div>
+            }
         </>
     )
 }export default DetailMenu
