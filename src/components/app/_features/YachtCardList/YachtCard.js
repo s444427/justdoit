@@ -1,11 +1,11 @@
 import {Calendar, CaretUpSquare, PersonFill, Rulers} from "react-bootstrap-icons";
 
-import logo from "../../assets/logo.svg"
+import logo from "../../../../assets/logo.svg"
 import {Button} from "react-bootstrap";
-import "./YachtListCard.css"
+import "./YachtCard.css"
 
 
-export function YachtListCard (props) {
+export function YachtCard (props) {
 
     return (
         <>
@@ -44,4 +44,4 @@ export function YachtListCard (props) {
             </div>
         </>
     )
-} export default YachtListCard;
+} export default YachtCard;

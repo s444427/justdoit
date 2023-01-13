@@ -1,4 +1,4 @@
-import logo from "../../../assets/logo.svg"
+import logo from "../../../../../../assets/logo.svg"
 
 export function YachtInfo (props) {
 
@@ -21,7 +21,7 @@ export function YachtInfo (props) {
                 </div>
                 <div>
                     <h5 style={{textAlign: "center", margin: "10px"}}>
-                        Tytuł podrozdziału
+                        Statystyki
                     </h5>
                     <div>
                         hello

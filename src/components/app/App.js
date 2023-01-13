@@ -1,9 +1,9 @@
-import './styles/App.css';
+import './App.css';
 import Col from 'react-bootstrap/Col';
 import Row from "react-bootstrap/Row";
 import {Button, Container} from "react-bootstrap";
-import YachtListCard from "./components/YachtListCard/YachtListCard";
-import DetailMenu from "./components/DetailMenu/DetailMenu";
+import YachtCard from "./_features/YachtCardList/YachtCard";
+import DetailMenu from "./_features/DetailMenu/DetailMenu";
 import axios from "axios";
 
 
@@ -38,12 +38,12 @@ function App() {
                     <Col sm={4} style={{background: "#95b8d1", paddingTop: "20px", paddingBottom: "20px", height: "800px"}}>
                         <Button variant="success" onClick={() => {downloadAPI(options)}}>Dodaj kartę</Button>
                         <nav style={{height: "750px", overflow: "hidden", overflowY: "scroll"}}>
-                            <YachtListCard/>
-                            <YachtListCard/>
-                            <YachtListCard/>
-                            <YachtListCard/>
-                            <YachtListCard/>
-                            <YachtListCard/>
+                            <YachtCard/>
+                            <YachtCard/>
+                            <YachtCard/>
+                            <YachtCard/>
+                            <YachtCard/>
+                            <YachtCard/>
                         </nav>
                     </Col>
                     <Col sm={8} style={{background: "#E8DDB5", padding: "20px"}}>

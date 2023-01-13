@@ -1,7 +1,7 @@
-import logo from "../../assets/logo.svg"
+import logo from "../../../../assets/logo.svg"
 import {Button, ButtonGroup} from "react-bootstrap";
 import {useState} from "react";
-import YachtInfo from "./YachtInfo/YachtInfo";
+import YachtInfo from "./_features/YachtInfo/YachtInfo";
 
 export function DetailMenu (props) {
 
@@ -12,7 +12,7 @@ export function DetailMenu (props) {
     return (
         <>
             <div >
-                <ButtonGroup style={{ width: "100%"}}>
+                <ButtonGroup style={{ width: "100%", marginBottom: "20px"}}>
                     <Button variant={"light"} onClick={() => set_chosen_tab("INFO")}>Informacje o Jachcie</Button>
                     <Button variant={"light"} onClick={() => set_chosen_tab("CALENDAR")}>Kalendarz dostępności</Button>
                     <Button variant={"light"} onClick={() => set_chosen_tab("OTHER")}>Button 3</Button>
