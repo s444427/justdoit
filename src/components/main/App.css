@@ -1,4 +1,9 @@
 .App {
   text-align: left;
   background: #C5D5E4;
+  height: 100%;
+}
+
+body {
+  height: 100%;
 }

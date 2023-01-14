@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { createRoot } from "react-dom/client";
 
 // Project files
-import App from './components/app/App';
+import App from './components/main/App';
 import {store} from "./components/shared/Store/Store";
 
 // CSS files
