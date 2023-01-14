@@ -12,21 +12,20 @@ export function YachtInfo (props) {
 
     return (
         <>
-            {console.log("props")}
-            {console.log(props)}
             <div style={{padding: "20px"}}>
                 <h5 style={{textAlign: "center"}}>
-                    Antila 27
+                    {props.current_yacht.name}
                 </h5>
                 <div style={{display: "flex", textAlign:"center"}}>
                     <div>
-                        <img src={lead_img} className={styles.lead_img}/>
+                        <img className={styles.lead_img} src={require(`./../../../../../assets/yachtsPhotos/${props.current_yacht.picture[0]}`)} alt=""/>
+
                     </div>
                     <div>
-                        <img src={supp_img_1} className={styles.support_img} alt=""/>
-                        <img src={supp_img_2} className={styles.support_img} alt=""/>
-                        <img src={supp_img_3} className={styles.support_img} alt=""/>
-                        <img src={supp_img_4} className={styles.support_img} alt=""/>
+                        <img className={styles.support_img} src={require(`./../../../../../assets/yachtsPhotos/${props.current_yacht.picture[0]}`)} alt=""/>
+                        <img className={styles.support_img} src={require(`./../../../../../assets/yachtsPhotos/${props.current_yacht.picture[0]}`)} alt=""/>
+                        <img className={styles.support_img} src={require(`./../../../../../assets/yachtsPhotos/${props.current_yacht.picture[0]}`)} alt=""/>
+                        <img className={styles.support_img} src={require(`./../../../../../assets/yachtsPhotos/${props.current_yacht.picture[0]}`)} alt=""/>
                     </div>
                 </div>
                 <div>
@@ -34,7 +33,7 @@ export function YachtInfo (props) {
                         Statystyki
                     </h5>
                     <div>
-                        hello
+                        {props.current_yacht.description}
                     </div>
                 </div>
             </div>

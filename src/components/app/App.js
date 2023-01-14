@@ -27,7 +27,7 @@ export const App = (props) => {
 
                             {props.yachts_content.length !== 0?
                                 props.yachts_content.map(card =>
-                                    <YachtCard key = {card.id} {...card}/>
+                                    <YachtCard key = {card.id} {...props} {...card}/>
                                 ): null
                             }
 

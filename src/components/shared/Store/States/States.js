@@ -16,7 +16,7 @@ export const yachts_content = (
 };
 
 export const current_yacht = (
-    state = default_state.yachts_content,
+    state = default_state.current_yacht,
     action
 ) => {
     switch (action.type) {
