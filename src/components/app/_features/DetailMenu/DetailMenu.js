@@ -1,7 +1,12 @@
-import logo from "../../../../assets/logo.svg"
-import {Button, ButtonGroup} from "react-bootstrap";
+// General React imports
 import {useState} from "react";
-import YachtInfo from "./_features/YachtInfo/YachtInfo";
+
+// Project files
+import YachtInfo from "./YachtInfo/YachtInfo";
+import YachtCalendar from "./YachtCalendar/YachtCalendar";
+
+// CSS files
+import {Button, ButtonGroup} from "react-bootstrap";
 
 export function DetailMenu (props) {
 
@@ -15,13 +20,14 @@ export function DetailMenu (props) {
                 <ButtonGroup style={{ width: "100%", marginBottom: "20px"}}>
                     <Button variant={"light"} onClick={() => set_chosen_tab("INFO")}>Informacje o Jachcie</Button>
                     <Button variant={"light"} onClick={() => set_chosen_tab("CALENDAR")}>Kalendarz dostępności</Button>
-                    <Button variant={"light"} onClick={() => set_chosen_tab("OTHER")}>Button 3</Button>
                 </ButtonGroup>
             </div>
+
             {chosen_tab === "INFO"?
-                <YachtInfo/>:
+                <YachtInfo {...props}/>:
                 chosen_tab === "CALENDAR"?
-                    <div>Bonjour</div>:<div>Nie można wyświetlić informacji</div>
+                    <YachtCalendar/>:
+                    <div>Nie można wyświetlić informacji</div>
             }
         </>
     )

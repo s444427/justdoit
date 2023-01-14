@@ -1,53 +1,41 @@
+// General React imports
+import { connect } from "react-redux";
+
+// Project files
+import YachtCard from "./_features/sidebar/YachtCard/YachtCard";
+import DetailMenu from "./_features/DetailMenu/DetailMenu";
+import {mapDispatchToProps, mapStateToProps} from "../shared/Store/functions/storeFunctions";
+
+// CSS files
 import './App.css';
 import Col from 'react-bootstrap/Col';
 import Row from "react-bootstrap/Row";
 import {Button, Container} from "react-bootstrap";
-import YachtCard from "./_features/YachtCardList/YachtCard";
-import DetailMenu from "./_features/DetailMenu/DetailMenu";
-import axios from "axios";
 
 
-export function downloadAPI(options) {
-    axios.request(options).then(function (response) {
-        console.log(response.data);
-    }).catch(function (error) {
-        console.error(error);
-    });
-}
-
-function App() {
-
-
-    const options = {
-        method: 'GET',
-        url: 'https://yh-finance.p.rapidapi.com/stock/v2/get-summary',
-        params: {symbol: 'AMRN', region: 'US'},
-        headers: {
-            'X-RapidAPI-Key': '6763036c79msh8681f52b051f4cap1820f0jsn288cd3be66a0',
-            'X-RapidAPI-Host': 'yh-finance.p.rapidapi.com'
-        }
-    };
-
-
-
+export const App = (props) => {
 
     return (
         <div className="App">
-            <Container style={{paddingTop: "100px"}}>
+            <Container style={{paddingTop: "70px"}}>
                 <Row className="justify-content-md-center">
-                    <Col sm={4} style={{background: "#95b8d1", paddingTop: "20px", paddingBottom: "20px", height: "800px"}}>
-                        <Button variant="success" onClick={() => {downloadAPI(options)}}>Dodaj kartę</Button>
-                        <nav style={{height: "750px", overflow: "hidden", overflowY: "scroll"}}>
-                            <YachtCard/>
-                            <YachtCard/>
-                            <YachtCard/>
-                            <YachtCard/>
-                            <YachtCard/>
-                            <YachtCard/>
+                    <Col sm={4} style={{background: "#304D6D", paddingTop: "20px", paddingBottom: "20px", height: "800px"}}>
+
+                        <Button variant="success" onClick={() => {console.log("Button pressed")}}>Dodaj kartę</Button>
+
+                        <nav style={{height: "700px", overflow: "hidden", overflowY: "scroll"}}>
+
+                            {props.yachts_content.length !== 0?
+                                props.yachts_content.map(card =>
+                                    <YachtCard key = {card.id} {...card}/>
+                                ): null
+                            }
+
                         </nav>
+
                     </Col>
-                    <Col sm={8} style={{background: "#E8DDB5", padding: "20px"}}>
-                        <DetailMenu/>
+                    <Col sm={8} style={{background: "#82A0BC", padding: "20px"}}>
+                        <DetailMenu {...props}/>
                     </Col>
                 </Row>
             </Container>
@@ -55,4 +43,7 @@ function App() {
   );
 }
 
-export default App;
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(App);

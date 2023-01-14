@@ -1,0 +1,13 @@
+.lead_img {
+    width: 400px;
+    background: pink;
+}
+
+.support_img_box {
+    border-radius: 25px;
+    background: pink;
+}
+
+.support_img {
+    width: 200px;
+}
