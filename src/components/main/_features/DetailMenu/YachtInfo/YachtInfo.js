@@ -1,31 +1,16 @@
 // Project files
 import YachtInfoHeader from "./_features/YachInfoHeader/YachtInfoHeader";
-import YachtInfoLeadImage from "./_features/YachtInfoLeadImage/YachtInfoLeadImage";
-import YachtImagePanel from "./_features/YachtInfoImagePanel/YachtInfoImagePanel";
-
+import YachtInfoImageSection from "./_features/YachtInfoImageSection/YachtInfoImageSection";
+import YachtInfoDescriptionSection from "./_features/YachtInfoDescrioptionSection/YachtInfoDescriptionSection";
 
 export function YachtInfo (props) {
     return (
         <>
-            <div style={{padding: "20px"}}>
+            <div style={{padding: "20px, 0, 20px, 20px"}}>
 
                 <YachtInfoHeader name = {props.current_yacht.name}/>
-
-                <div style={{display: "flex", textAlign:"center"}}>
-                    <YachtInfoLeadImage picture = {props.current_yacht.picture[0]}/>
-                    <YachtImagePanel picture = {props.current_yacht.picture}/>
-                </div>
-
-                <div>
-                    {/**/}
-                    <h5 style={{textAlign: "center", margin: "10px"}}>
-                        Statystyki
-                    </h5>
-                    {/**/}
-                    <div>
-                        {props.current_yacht.description}
-                    </div>
-                </div>
+                <YachtInfoImageSection {...props}/>
+                <YachtInfoDescriptionSection {...props}/>
 
             </div>
         </>

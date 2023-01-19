@@ -1,13 +1,8 @@
-.lead_img {
-    width: 400px;
-    background: pink;
-}
-
 .support_img_box {
     border-radius: 25px;
-    background: pink;
+    padding: 5px;
 }
 
 .support_img {
-    width: 200px;
+    width: 220px;
 }

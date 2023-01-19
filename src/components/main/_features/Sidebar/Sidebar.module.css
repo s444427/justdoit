@@ -1,0 +1,5 @@
+.side_navbar_scroll {
+    height: 800px;
+    overflow: hidden;
+    overflow-y: scroll;
+}

@@ -12,8 +12,8 @@ export function YachtCard (props) {
 
     return (
         <>
-            <div className ={` ${styles.card}`}
-                 style= {{background: currently_selected?"#939196":"white"}}
+            <div className ={styles.card}
+                 style= {{background: currently_selected? "#939196":"white"}}
                  onClick={() => {props.handleChangeYacht(props) }}>
 
                 <div>
@@ -24,7 +24,6 @@ export function YachtCard (props) {
                     <YachtCardImage {...props}/>
                     <YachtCardInfo {...props}/>
                 </div>
-
             </div>
         </>
     )

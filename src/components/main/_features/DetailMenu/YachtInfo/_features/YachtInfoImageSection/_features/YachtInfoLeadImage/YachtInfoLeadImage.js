@@ -4,7 +4,7 @@ export function YachtInfoLeadImage(props) {
     return (
         <>
             <div>
-                <img className={styles.lead_img} src={require("./../../../../../../../assets/yachtsPhotos/"+props.picture)} alt=""/>
+                <img className={`${styles.lead_img}`} src={props.picture} alt=""/>
             </div>
         </>
     )

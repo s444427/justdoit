@@ -3,7 +3,7 @@ import {Calendar, DoorClosed, Person, Rulers} from "react-bootstrap-icons";
 export function YachtCardInfo(props) {
     return (
         <>
-            <div style={{padding: "5px", margin: "auto"}}>
+            <div style={{marginLeft: "20px"}}>
                 <div> <Person/> {props.places} </div>
                 <div> <DoorClosed/> {props.cabins} </div>
                 <div> <Calendar/> {props.build_year} </div>

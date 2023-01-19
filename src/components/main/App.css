@@ -2,6 +2,8 @@
   text-align: left;
   background: #C5D5E4;
   height: 100vh;
+  font-family: Roboto, serif;
+
 }
 
 body {
@@ -12,13 +14,13 @@ body {
   background-color: #304D6D;
   padding-top: 20px;
   padding-bottom: 20px;
-  height: 800px;
+  height: 850px;
   width: 30%;
 }
 
 .content_box {
-  padding-top: 70px;
-  max-width: 1500px;
+  padding-top: 50px;
+  max-width: 1600px;
   margin: auto;
   display: flex;
 }

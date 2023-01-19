@@ -1,7 +1,11 @@
+import styles from "./YachtCardTitle.module.css"
+
 export function YachtCardTitle (props) {
     return (
         <>
-            <h5 style={{textAlign: "center"}}> {props.id} {props.name} </h5>
+            <div className={styles.card_title}>
+                {props.id}. {props.name}
+            </div>
         </>
     )
 } export default YachtCardTitle
